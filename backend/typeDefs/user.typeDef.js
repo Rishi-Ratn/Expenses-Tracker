@@ -11,7 +11,7 @@ const userTypeDef = `#graphql
     }
 
     type Query {
-        users: [User!]          # fetch all users, array of users, each user cannot be null
+        # users: [User!]          # fetch all users, array of users, each user cannot be null
         authUser: User          #if user not authenticated, then null response therefore not required 
         user(userId:ID!): User
     }

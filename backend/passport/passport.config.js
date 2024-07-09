@@ -10,7 +10,7 @@ export const configurePassport = async () => {
     });
 
     passport.deserializeUser(async (id,done)=>{
-        console.log("Deserializing user");   // When we get the user data from the session this function will run and we'll see this console log
+        console.log("Deserializing user");   
         try {
             const user = await User.findById(id);
             done(null,user);

@@ -2,7 +2,7 @@
 import {users} from '../dummyData/data.js';
 const userResolver = {
     Query:{
-        users: () => {
+        users: (_,_,{req,res}) => {                                          // context is shared all over the resolvers, desctructured context with {req,res}
             // Fetch all users from the database(now hardcoded here)
             return users;
         },
